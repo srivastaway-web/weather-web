@@ -1,0 +1,553 @@
+:root{
+    --color-red : #841C26;
+    --color-redbrown: #3b0d11;
+    --color-green : #52bd78;
+    --color-moistgreen : #768948;
+    --color-greenlight:#a7c957;
+    --color-greengray : #6e9075;
+    --color-gray : #5b6057;
+    --color-lightblue : #81f0e5;
+    --color-yellow : #e9eb9e;
+    --color-lightorange : #FFD8BE;
+    --color-darkblue : #293241;
+    --color-thodalightblue : #3d5a80;
+    --color-verylightblue : #98c1d9;
+    --color-lightcolor : #e0e1dd;
+
+    --color-lightblue : #B8B8FF;
+    --color-ocre : #b39c4d;
+
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+
+
+.wrapper{
+    background-color: blue;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+/* button no starts  */
+.button-no{
+
+    text-align: center;
+    height:100%; 
+    width:100%; 
+    font-size:3em;
+}
+
+.button-no>p{
+    transform: translateY(35vh);
+}
+
+/* button no ends  */
+
+
+/* aside starts  */
+aside{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(189, 170, 135);
+    width: 20vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2em;
+    
+
+}
+
+.comp-name{
+    background-color: aliceblue;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    font-size: 1.5em;
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    font-size: 1.5em;
+    
+}
+.menu>p,.logout{
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+.menu>p:hover, .logout:hover{
+    margin-left: 2em;
+}
+.menu>p.active , .logout.active{
+    background-color: aliceblue;
+    margin-left: 2em;
+}
+
+/* aside ends  */
+
+
+/* main starts  */
+
+main{
+    width:80vw ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 20vw;
+}
+
+/* nav starts  */
+nav{
+    background-color:var(--color-redbrown);
+    color: var(--color-yellow);
+    font-weight: 900;
+    text-shadow: 4px 3px 0px black;
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3em;
+    font-size: 1.5em;
+    position: sticky;
+    top: 0;
+}
+
+nav > div:nth-child(2){
+    width: 55%;
+    height: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav>div:nth-child(2)>input{
+    width: 85%;
+    height: 50%;
+    border-top-left-radius:15px;
+    border-bottom-left-radius:15px;
+    border: hidden;
+    padding-left: 2em;
+    font-size: 1em;
+    
+
+}
+nav>div:nth-child(2)>button{
+    height: 52%;
+    width: 75px;
+    border-top-right-radius:15px;
+    border-bottom-right-radius:15px;
+    border: hidden;
+    background-color: var(--color-moistgreen);
+
+}
+nav>div:nth-child(2)>button:hover{
+    border: solid;
+}
+
+nav> .material-symbols-sharp{
+    font-size: 2.5em;
+}
+
+/* nav ends  */
+
+/* cont starts  */
+.content{
+    width: 100%;
+    height: 80vh;
+}
+
+/* main page starts  */
+.main-page{
+    background-color: var(--color-green);
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    font-size: 2em;
+
+}
+
+/* main page ends  */
+
+/* weather-active starts  */
+
+
+#first{
+    background-color: var(--color-darkblue);
+    width: 100%;
+    min-height:40vh ;
+    display: flex;
+    flex-direction: column;
+}
+#first>h3{
+    text-align: center;
+    padding-top: 1em;
+    font-size: 2em;
+    text-shadow: 1px 2px 0px rgba(0, 0, 0, 1)
+}
+
+#first>div{
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2em;
+    gap: 2em;
+    /* background-color: aliceblue; */
+}
+
+#first>div>div:nth-child(1){
+    background-color: var(--color-thodalightblue);
+    width: 50%;
+    height:80%;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5em;
+    font-weight: 500;
+    
+}
+
+#first>div>div:nth-child(1)>div{
+    font-size: 1.7em;
+}
+
+#first>div>div:nth-child(2){
+    width: 50%;
+    height: 80%;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1em 0.5em;
+    gap: 0.5em;
+    background-color: var(--color-thodalightblue);
+    
+}
+
+.weath-card{
+    background-color: var(--color-verylightblue);
+    width: 45%;
+    height:30%;
+    border-radius: 15px;
+    gap: 2em;
+    display: flex;
+    align-items: center;
+    padding-left: 1em;
+}
+.weath-card:hover{
+    border: 3px solid black;
+}
+.weath-card > .material-symbols-sharp{
+    font-size: 2.5em;
+}
+.data{
+    font-size: 1.5em;
+}
+
+/* weather-active ends  */
+
+/* weather-forecast starts  */
+
+.weather-forecast{
+    background-color: rgb(112, 41, 41);
+    color: var(--color-yellow);
+    width: 100%;
+    height: 55vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    font-size: 1.5em;
+    padding: 1em;
+    text-shadow: 1px 2px 0px black;
+}
+
+.weather-forecast h3{
+    color: var(--color-lightcolor);
+    text-shadow: 0px 0px 10px black;
+    font-size: 2em;
+}
+.card{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2em;
+    gap:3em;
+}
+
+.forecast-card{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    transition: all 300ms ease;
+    height: 150%;
+    width: 40%;
+    border-radius: 20px;
+}
+
+.forecast-card:hover{
+    border:3px solid black;
+    background-color: #fcbf49;
+}
+.forecast-card div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* weather-forecast ends  */
+
+/* sunrise-sunset starts  */
+
+.rise-set{
+    background-color: #fce45d;
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    padding: 2em;
+
+}
+
+/* aqi starts  */
+.rise-set>div:nth-child(1){
+    background-color: var(--color-thodalightblue);
+    border-radius: 40px;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+.rise-set>div:nth-child(1)>div{
+    width: 90%;
+    height: 70%;
+    background-color: var(--color-thodalightblue);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.aqi-card{
+    background-color: var(--color-verylightblue);
+    width: 45%;
+    height:17%;
+    border-radius: 15px;
+    gap: 2em;
+    display: flex;
+    align-items: center;
+    padding-left: 1em;
+}
+
+.aqi-card:hover{
+    border: 3px solid black ;
+}
+.aqi-card > .material-symbols-sharp{
+    font-size: 2.5em;
+}
+
+/* aqi ends  */
+
+.rise-set>div:nth-child(2){
+    background-color: #6a994e;
+    width: 50%;
+    height: 100%;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.rise-set>div:nth-child(2)>h3{
+    font-size: 2em;
+    color: #e8fccf;
+}
+.rise-set>div:nth-child(2)>div{
+    /* background-color: var(--color-ocre); */
+    width: 90%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4em;
+}
+.rise{
+    width: 90%;
+    height: 30%;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.2em;
+    font-size: 1.5em;
+    background-color: #a7c957;
+}
+
+.rise:hover{
+    border: 3px solid black ;
+}
+
+.rise>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+.set{
+    width: 90%;
+    height: 30%;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.2em;
+    font-size: 1.5em;
+    background-color: #a7c957;
+}
+
+.set:hover{
+    border: 3px solid black ;
+}
+
+.set>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+/* sunrise-sunset ends  */
+
+/* map starts */
+
+.map-info{
+    /* background-color: rgb(142, 84, 84); */
+    height: 80vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em;
+    gap:1em;
+}
+
+#map{
+    height: 80% ;
+    width: 65% ;
+    border: solid;
+    border-radius: 15px;
+}
+
+#map-details{
+    background-color: var(--color-darkblue);
+    height: 80%;
+    width: 35%;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2em;
+}
+#map-details>h3{
+    width: auto;
+    font-size: 2em;
+    color: #fce45d;
+}
+
+#map-details>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:1em;
+
+}
+
+#map-details>div>p{
+    font-size: 1.3em;
+    background-color: var(--color-green);
+    padding: 1.5em;
+    width: 120%;
+    border-radius: 15px;
+
+}
+/* map ends  */
+
+
+
+/* cloth recommendation starts */
+.clothes{
+    background-color: #c55c5d;
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1em;
+    padding: 0 1em;
+    
+}
+.clothes h2{
+    font-size: 2.5em;
+    color: var(--color-lightcolor);
+    text-shadow: 0px 0px 10px black;
+}
+
+
+.clothes>div{
+    width: 90%;
+    height:70% ;
+    background-color: #293241;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1em;
+    border-radius: 30px;
+    padding: 2em;
+}
+.clothes>div>div{
+    font-size: 1.9em;
+}
+#clothing-recommendations{
+    background-color: var(--color-thodalightblue);
+    padding: 1.5em;
+    width: 100%;
+    color: var(--color-verylightblue);
+    text-shadow: 1px 2px 0px black;
+}
+.clothes>div:hover{
+    border: 3px solid black;
+}
