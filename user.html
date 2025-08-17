@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- stylesheet  -->
+    <link rel="stylesheet" href="new.css">
+    <!-- material-fonts  -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp" rel="stylesheet" />
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+
+ 
+
+</head>
+<body>
+    <div class="wrapper">
+        <!-- aside starts  -->
+        <aside>
+            <div class="comp-name">
+                <img src="./images/comp-logo.jpg" alt="comp-logo" height="50px" width="50px">
+                <h1>Srawana</h1>
+            </div>
+            <div class="menu">
+                    <p class="menu-item active"><span class="material-symbols-sharp">grid_view</span>&nbsp;&nbsp;Welcome Page</p>
+                    <p class="menu-item"><img src="./images/weather-logo.svg" height="50px">&nbsp;&nbsp;Weather</p>
+                    <p class="menu-item"><span class="material-symbols-sharp">map</span>&nbsp;&nbsp;Map</p>
+                    <p class="menu-item"><span class="material-symbols-sharp">location_on</span>&nbsp;&nbsp;Saved Location</p>
+                
+            </div>
+            <p class="logout"><span class="material-symbols-sharp">logout</span>&nbsp;&nbsp;Logout</p>
+        </aside>
+
+        <!-- aside ends -->
+
+        <!-- main starts  -->
+        <main>
+            <nav>
+                <div>
+                    <p class="city">Delhi</p>
+                    <p class="country">New Delhi,India&nbsp;</p>
+                </div>
+
+                <div>
+                    <input type="text" placeholder="Search Location here" class="search-text">
+                    <button class="search-button "><span class="material-symbols-sharp active">search</span></button>
+                </div>
+
+                <div>
+                    <p id="date"></p>
+                </div>
+
+                <span class="material-symbols-sharp">account_circle</span>
+            
+            </nav>
+            <div class="content">
+                <div class="target-content">
+                    <div class="main-page">
+                        <span>Welcome to the Weather Tracking System platform</span>
+                        <span>Please enter your preferred city to receive accurate, real-time weather updates!</span>
+                    </div>
+                </div>
+                
+                <div class="target-content">
+                    <div class="weather-active">
+                        <!-- one pointer details  -->
+    
+                        <div id="first">
+                            <h3>Important Details</h3>
+    
+                            <div>
+                                <!-- temperature and description  -->
+                                <div>
+                                    <img class="weath-icon" alt="weather icon">
+                                    <div class="temp">
+                                        <p class="temperature">20°C</p>
+                                        <p class="condition">Dramatic cloudy</p>
+                                    </div>
+                                   
+                                </div>
+                                
+                                <!-- other details  -->
+                                <div>
+                                    <!-- wind speed  -->
+                                    <div class="weath-card">
+                                        <span class="material-symbols-sharp">air</span>
+                                        <div class="data">
+                                            <p class="wind">12km/h</p>
+                                        </div>
+                                    </div>
+            
+                                    <!-- cloudiness  -->
+                                    <div class="weath-card">
+                                        <span class="material-symbols-sharp">weather_mix</span>
+                                        <div class="data">
+                                            <p class="cloudiness">24%</p>
+                                        </div>
+                                    </div>
+            
+                                    <!-- <p>Pressure</p> -->
+                                    <div class="weath-card">
+                                        <span class="material-symbols-sharp">compress</span>
+                                        <div class="data">
+                                            <p class="pressure">32</p>
+                                        </div>
+                                    </div>
+            
+                                    <!-- humidity  -->
+                                    <div class="weath-card">
+                                        <span class="material-symbols-sharp">humidity_percentage</span>
+                                        <div class="data">
+                                            
+                                            <p class="humidity">24%</p>
+                                        </div>
+                                    </div>
+            
+                                    <!-- <p>aqi</p> -->
+                                    <div class="weath-card">
+                                        <span class="material-symbols-sharp">humidity_percentage</span>
+                                        <div class="data">
+                                            <p class="aqi">24%</p>
+                                        </div>
+                                    </div>
+                                    <!-- visibility  -->
+                                    <div class="weath-card">
+                                        <span class="material-symbols-sharp">humidity_percentage</span>
+                                        <div class="data">
+                                            <p class="visibility">24%</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+    
+                        </div>
+    
+                        
+    
+                        <div class="rise-set">
+                            <div>
+                                <h3>AIR QUALITY INDEX</h3>
+                                <div>
+                                        <!--co -->
+                                    <div class="aqi-card">
+                                        <span class="material-symbols-sharp">air</span>
+                                        <div class="data">
+                                            <p class="co">12km/h</p>
+                                        </div>
+                                    </div>
+            
+                                    <!-- nh3  -->
+                                    <div class="aqi-card">
+                                        <span class="material-symbols-sharp">weather_mix</span>
+                                        <div class="data">
+                                            <p class="nh3">24%</p>
+                                        </div>
+                                    </div>
+            
+                                    <!-- <p>no</p> -->
+                                    <div class="aqi-card">
+                                        <span class="material-symbols-sharp">compress</span>
+                                        <div class="data">
+                                            <p class="no">32</p>
+                                        </div>
+                                    </div>
+            
+                                    <!-- no2  -->
+                                    <div class="aqi-card">
+                                        <span class="material-symbols-sharp">humidity_percentage</span>
+                                        <div class="data">
+                                            
+                                            <p class="no2">24%</p>
+                                        </div>
+                                    </div>
+            
+                                    <!-- <p>o3</p> -->
+                                    <div class="aqi-card">
+                                        <span class="material-symbols-sharp">humidity_percentage</span>
+                                        <div class="data">
+                                            <p class="o3">24%</p>
+                                        </div>
+                                    </div>
+    
+                                    <!-- pm2_5  -->
+                                    <div class="aqi-card">
+                                        <span class="material-symbols-sharp">humidity_percentage</span>
+                                        <div class="data">
+                                            <p class="pm25">24%</p>
+                                        </div>
+                                    </div>
+                                    <!-- pm10 -->
+                                    <div class="aqi-card">
+                                        <span class="material-symbols-sharp">humidity_percentage</span>
+                                        <div class="data">
+                                            <p class="pm10">24%</p>
+                                        </div>
+                                    </div>
+                                    <!-- so2 -->
+                                    <div class="aqi-card">
+                                        <span class="material-symbols-sharp">humidity_percentage</span>
+                                        <div class="data">
+                                            <p class="so2">24%</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                            <div>
+                                <h3>sunrise and sunset</h3>
+                                <div>
+                                    <div class="rise">
+                                        <div>
+                                            <img src="./images/sunrise.svg" height="60px" alt="sunrise">
+                                        
+                                            <div>
+                                                <!-- <p>Sunrise</p> -->
+                                                <p class="sunrise">4:20 AM</p>
+                                            </div>
+                                        </div>
+                                        <p class="sunrise-time">4 hours ago</p>
+                                    </div>
+                    
+                                    <div class="set">
+                                        <div>
+                                            <img src="./images/sunset down.svg" height="60px" alt="sunset">
+                                            
+                                            <div>
+                                                <!-- <p>Sunset</p> -->
+                                                <p class="sunset">5:50 PM</p>
+                                            </div>
+                                        </div>
+                                        <p class="sunset-time">in 9 hours</p>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                        
+                            
+                        </div>
+    
+
+    
+    
+                        <div class="clothes">
+                            
+                            <div>
+                                <h2>RECOMMENDED CLOTHING</h2>
+                                <div id="clothing-recommendations">
+                                    <ul id="recommendations">
+                                        <li>Loading recommendations...</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- weather forecast  -->
+                        <div class="weather-forecast">
+                        
+                            <h3>WEATHER FORECAST</h3>
+                            <div class="card">
+    
+                                <div class="forecast-card">
+                                    <div>
+                                        <img class="weather-icon" alt="weather icon">
+                                        <p>few clouds</p>
+                                    </div>
+                                    <div>
+                                        <p>22.05°C</p>
+                                        <p>2/24/2025</p>
+                                    </div>
+                                    
+                                </div>
+    
+                                <div class="forecast-card">
+                                    <div>
+                                        <img class="weather-icon" alt="weather icon">
+                                        <p>few clouds</p>
+                                    </div>
+                                    <div>
+                                        <p>22.05°C</p>
+                                        <p>2/24/2025</p>
+                                    </div>
+                                </div>
+    
+                                <div class="forecast-card">
+                                    <div>
+                                        <img class="weather-icon" alt="weather icon">
+                                        <p>few clouds</p>
+                                    </div>
+                                    <div>
+                                        <p>22.05°C</p>
+                                        <p>2/24/2025</p>
+                                    </div>
+                                </div>
+    
+                                <div class="forecast-card">
+                                    <div>
+                                        <img class="weather-icon" alt="weather icon">
+                                        <p>few clouds</p>
+                                    </div>
+                                    <div>
+                                        <p>22.05°C</p>
+                                        <p>2/24/2025</p>
+                                    </div>
+                                </div>
+    
+                                <div class="forecast-card">
+                                    <div>
+                                        <img class="weather-icon" alt="weather icon">
+                                        <p>few clouds</p>
+                                    </div>
+                                    <div>
+                                        <p>22.05°C</p>
+                                        <p>2/24/2025</p>
+                                    </div>
+                                </div>
+    
+                            </div>
+                        </div> 
+    
+            
+    
+                    </div>
+                </div>
+
+                <div class="target-content">
+                    <div class="map-info">
+                        <div id="map" ></div>
+                        <div id="map-details">
+                            <h3>Weather Details</h3>
+                            <div>
+                                <p id="map-description">Weather information will appear here.</p>
+                                <p id="coordinates">Coordinates will appear here.</p>
+                                <p id="map-temperature">Temperature will appear here.</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="target-content">
+                    <div class="saved-content"></div>
+                </div>
+
+                <div class="button-no" style="display: none;">
+                    <p>Enter your preferred city </p>
+                </div>
+               
+
+                
+
+                
+
+                </div>
+                
+                
+                
+            </div>
+                
+
+        </main>
+
+        <!-- main ends  -->
+    </div>
+
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+    <!-- javascript  -->
+
+    <script src="new.js" type="module"></script>
+</body>
+</html>
